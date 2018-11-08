@@ -1,20 +1,37 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<body>
+  <div style=text-align:center>
+    <h1>Welcome to our {{title}}!</h1>
+  </div>
+
+  <div id="calculator">
+    <!-- This is for the main body of the calc -->
+    <form>
+    <input type="text" id="out" class="screen" name="output" placeholder="0"/>
+    <!-- This is the output screen display -->
+    <div class="key_body">
+      <!-- Body for where the calculator keys will be held -->
+      <input type="button" class="calculator_keys operation" value="C" (click)="clear()" />
+      <input type="button" class="calculator_keys operation" value="+/-" />
+      <input type="button" class="calculator_keys operation" value="%" />
+      <input type="button" class="calculator_keys operation" data-action="divide" value="/" />
+      <input type="button" class="calculator_keys" value="7" (click)="seven()" />
+      <input type="button" class="calculator_keys" value="8" />
+      <input type="button" class="calculator_keys" value="9" />
+      <input type="button" class="calculator_keys operation" data-action="multiply" value="X" />
+      <input type="button" class="calculator_keys" value="6" />
+      <input type="button" class="calculator_keys" value="5" />
+      <input type="button" class="calculator_keys" value="4" />
+      <input type="button" class="calculator_keys operation" data-action="substract" value="-" />
+      <input type="button" class="calculator_keys" value="3" />
+      <input type="button" class="calculator_keys" value="2" />
+      <input type="button" class="calculator_keys" value="1" />
+      <input type="button" class="calculator_keys operation" data-action="addition" value="+" />
+      <input type="button" class="calculator_keys zero" value="0" />
+      <!-- <input type="button" class="calculator_keys" value=" " /> -->
+      <input type="button" class="calculator_keys" value="." />
+      <input type="button" class="calculator_keys operation" data-action="calculate" value="=" />
+    </div>
+    </form>
+  </div>
+</body>
