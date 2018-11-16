@@ -13,7 +13,27 @@ export class AppComponent {
   t = document.getElementById('out') as HTMLInputElement;
   x: string;
 
-  constructor() { }
+  constructor(t, x) {
+    document.onkeydown = function (e) {
+      switch (e.keyCode) {
+        case 55:
+        t = document.getElementById('out') as HTMLInputElement;
+        x = t.value = t.value + '7';
+          console.log('7');
+          break;
+        case 103:
+          console.log('7');
+          break;
+        case 39:
+          console.log('Got to the next page');
+          break;
+
+        default:
+          return; // Do nothing for the rest
+      }
+    };
+
+  }
 
   clear() {
     this.t = document.getElementById('out') as HTMLInputElement;
@@ -70,8 +90,7 @@ export class AppComponent {
   }
   posneg() {
     this.t = document.getElementById('out') as HTMLInputElement;
-    this.x = this.t.value;
-   // this.x = this.t.value = eval(this.t.value * -1);
+    //  this.x = this.t.value = eval(this.t.value * -1);
   }
   add() {
     this.t = document.getElementById('out') as HTMLInputElement;
@@ -93,6 +112,5 @@ export class AppComponent {
     this.t = document.getElementById('out') as HTMLInputElement;
     this.x = this.t.value = eval(this.t.value);
     console.log(this.x);
-
   }
 }
