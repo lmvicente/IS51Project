@@ -12,25 +12,25 @@
     <div class="key_body">
       <!-- Body for where the calculator keys will be held -->
       <input type="button" class="calculator_keys operation" value="C" (click)="clear()" />
-      <input type="button" class="calculator_keys operation" value="+/-" />
+      <input type="button" class="calculator_keys operation" value="+/-" (click)="posneg()"/>
       <input type="button" class="calculator_keys operation" value="%" />
-      <input type="button" class="calculator_keys operation" data-action="divide" value="/" />
+      <input type="button" class="calculator_keys operation" (click)="divide()"value="/" />
       <input type="button" class="calculator_keys" value="7" (click)="seven()" />
-      <input type="button" class="calculator_keys" value="8" />
-      <input type="button" class="calculator_keys" value="9" />
-      <input type="button" class="calculator_keys operation" data-action="multiply" value="X" />
-      <input type="button" class="calculator_keys" value="6" />
-      <input type="button" class="calculator_keys" value="5" />
-      <input type="button" class="calculator_keys" value="4" />
-      <input type="button" class="calculator_keys operation" data-action="substract" value="-" />
-      <input type="button" class="calculator_keys" value="3" />
-      <input type="button" class="calculator_keys" value="2" />
-      <input type="button" class="calculator_keys" value="1" />
-      <input type="button" class="calculator_keys operation" data-action="addition" value="+" />
-      <input type="button" class="calculator_keys zero" value="0" />
+      <input type="button" class="calculator_keys" value="8" (click)="eight()" />
+      <input type="button" class="calculator_keys" value="9" (click)="nine()"/>
+      <input type="button" class="calculator_keys operation" (click)="multiply()" value="*" />
+      <input type="button" class="calculator_keys" value="6" (click)="six()" />
+      <input type="button" class="calculator_keys" value="5" (click)="five()"/>
+      <input type="button" class="calculator_keys" value="4" (click)="four()" />
+      <input type="button" class="calculator_keys operation" (click)="subtract()" value="-" />
+      <input type="button" class="calculator_keys" value="3" (click)="three()"/>
+      <input type="button" class="calculator_keys" value="2" (click)="two()" />
+      <input type="button" class="calculator_keys" value="1" (click)="one()"/>
+      <input type="button" class="calculator_keys operation" (click)="add()" value="+" />
+      <input type="button" class="calculator_keys zero" value="0" (click)="zero()"/>
       <!-- <input type="button" class="calculator_keys" value=" " /> -->
-      <input type="button" class="calculator_keys" value="." />
-      <input type="button" class="calculator_keys operation" data-action="calculate" value="=" />
+      <input type="button" class="calculator_keys" value="." (click)="decimal()" />
+      <input type="button" class="calculator_keys operation" (click)="equal()" value="=" />
     </div>
     </form>
   </div>

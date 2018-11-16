@@ -10,35 +10,89 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Calculator';
-  x = document.getElementById('out');
+  t = document.getElementById('out') as HTMLInputElement;
+  x: string;
 
   constructor() { }
 
-  clear (t: string) {
-    t = document.getElementById('out').value = '0';
-    alert('Numbers cleared!');
+  clear() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = '';
   }
 
-  seven(y: string) {
-  y = this.x.value;
-  this.x.append(y);
+  zero() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '0';
   }
-  // clear(x: number, numberVal) {
-  //   numberVal = this.outputVal.value;
-  //   x = numberVal.length;
-  //   if (x >= 0) {
-  //     numberVal = '';
-  //     alert('cleared');
-  //   }
-  // }
 
-  // myFunction(outputVal, result: string) {
-  //   outputVal = this.output as HTMLInputElement;
-  //   result = '7' + outputVal.value;
-  //   if (outputVal === '') {
-  //     alert('must have something');
-  //   } else {
-  //     alert(outputVal);
-  //   }
-  // }
+  one() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '1';
+  }
+  two() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '2';
+  }
+
+  three() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '3';
+  }
+  four() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '4';
+  }
+
+  five() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '5';
+  }
+  six() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '6';
+  }
+
+  seven() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '7';
+  }
+  eight() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '8';
+  }
+  nine() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '9';
+  }
+  decimal() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '.';
+  }
+  posneg() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value;
+   // this.x = this.t.value = eval(this.t.value * -1);
+  }
+  add() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '+';
+  }
+  subtract() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '-';
+  }
+  multiply() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '*';
+  }
+  divide() {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = this.t.value + '/';
+  }
+  equal(z: string) {
+    this.t = document.getElementById('out') as HTMLInputElement;
+    this.x = this.t.value = eval(this.t.value);
+    console.log(this.x);
+
+  }
 }
