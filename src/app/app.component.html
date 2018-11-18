@@ -3,17 +3,22 @@
   <div style=text-align:center>
     <h1>Welcome to our {{title}}!</h1>
   </div>
-
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="https://github.com/lmvicente/IS51Project" target="_blank" >Github</a>
+    <a href="#">Changelog</a>
+    <a href="#">Other Projects</a>
+  </nav>
   <div id="calculator">
     <!-- This is for the main body of the calc -->
     <form>
-    <input type="text" id="out" class="screen" name="output" placeholder="0"/>
+    <input type="text" id="out" class="screen" name="output" placeholder="Click a button to get started!" disabled />
     <!-- This is the output screen display -->
     <div class="key_body">
       <!-- Body for where the calculator keys will be held -->
       <input type="button" class="calculator_keys operation" value="C" (click)="clear()" />
       <input type="button" class="calculator_keys operation" value="+/-" (click)="posneg()"/>
-      <input type="button" class="calculator_keys operation" value="%" />
+      <input type="button" class="calculator_keys operation" value="%" (click)="percent()"/>
       <input type="button" class="calculator_keys operation" (click)="divide()"value="/" />
       <input type="button" class="calculator_keys" value="7" (click)="seven()" />
       <input type="button" class="calculator_keys" value="8" (click)="eight()" />
@@ -34,4 +39,6 @@
     </div>
     </form>
   </div>
+<br>
+<br>
 </body>
