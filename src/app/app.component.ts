@@ -19,72 +19,73 @@ export class AppComponent {
     document.addEventListener('keydown', (event) => {
       const keyEvent = event.keyCode;
       if (keyEvent === 49 || keyEvent === 97) {
-        x = this.t.value = this.t.value + '1';
+        this.one();
         console.log(x);
       }
       if (keyEvent === 50 || keyEvent === 98) {
-        x = this.t.value = this.t.value + '2';
+        this.two();
         console.log(x);
       }
       if (keyEvent === 51 || keyEvent === 99) {
-        x = this.t.value = this.t.value + '3';
+        this.three();
         console.log(x);
       }
       if (keyEvent === 52 || keyEvent === 100) {
-        x = this.t.value = this.t.value + '4';
+        this.four();
         console.log(x);
       }
       if (keyEvent === 53 || keyEvent === 101) {
-        x = this.t.value = this.t.value + '5';
+        this.five();
         console.log(x);
       }
       if (keyEvent === 54 || keyEvent === 102) {
-        x = this.t.value = this.t.value + '6';
+       this.six();
         console.log(x);
       }
       if (keyEvent === 55 || keyEvent === 103) {
-        x = this.t.value = this.t.value + '7';
+        this.seven();
         console.log(x);
       }
       if (keyEvent === 56 || keyEvent === 104) {
-        x = this.t.value = this.t.value + '8';
+        this.eight();
         console.log(x);
       }
       if (keyEvent === 57 || keyEvent === 105) {
-        x = this.t.value = this.t.value + '9';
+        this.nine();
         console.log(x);
       }
       if (keyEvent === 48 || keyEvent === 96) {
-        x = this.t.value = this.t.value + '0';
+        this.zero();
         console.log(x);
       }
       if (keyEvent === 190 || keyEvent === 110) {
-        x = this.t.value = this.t.value + '.';
+        this.decimal();
         console.log(x);
       }
       if (keyEvent === 107) {
-        x = this.t.value = this.t.value + '+';
+        this.add();
         console.log(x);
       }
       if (keyEvent === 111) {
-        x = this.t.value = this.t.value + '/';
+        this.divide();
         console.log(x);
       }
       if (keyEvent === 106) {
-        x = this.t.value = this.t.value + '*';
+       this.multiply();
         console.log(x);
       }
       if (keyEvent === 109) {
-        x = this.t.value = this.t.value + '-';
+        this.subtract();
         console.log(x);
       }
 
       if (keyEvent === 8) {
-        x = this.t.value = '';
+       this.clear();
         console.log('cleared');
       }
       if (keyEvent === 13) {
-        x = this.t.value = eval(this.t.value);
+        this.equal();
+        // x = this.t.value = eval(this.t.value);
       }
     }
     );
@@ -180,7 +181,7 @@ export class AppComponent {
     this.t = document.getElementById('out') as HTMLInputElement;
     this.x = this.t.value = this.t.value + '/';
   }
-  equal(z: string) {
+  equal() {
     this.t = document.getElementById('out') as HTMLInputElement;
     this.x = this.t.value = eval(this.t.value);
     console.log(this.x);
